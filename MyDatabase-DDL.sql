@@ -1,0 +1,18 @@
+#DATA DEFINITION LANGUAGE
+
+USE MyDatabase;
+
+#1.CREATE
+CREATE TABLE persons (
+    id BIGINT NOT NULL,
+    person_name VARCHAR(255) NOT NULL,
+    birth_data DATE,
+    phone VARCHAR(10) NOT NULL
+);
+#2.ALTER
+ALTER TABLE persons ADD PRIMARY KEY (id);
+ALTER TABLE persons ADD COLUMN (email VARCHAR(255));
+
+ALTER TABLE persons DROP COLUMN phone;
+#3.DROP
+DROP TABLE IF EXISTS persons;
